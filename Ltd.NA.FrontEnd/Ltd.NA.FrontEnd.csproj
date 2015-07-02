@@ -14,7 +14,7 @@
     <RootNamespace>Ltd.NA.FrontEnd</RootNamespace>
     <AssemblyName>Ltd.NA.FrontEnd</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -38,7 +38,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -48,6 +69,33 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -55,8 +103,78 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Favicons\android-icon-144x144.png" />
+    <Content Include="Content\Favicons\android-icon-192x192.png" />
+    <Content Include="Content\Favicons\android-icon-36x36.png" />
+    <Content Include="Content\Favicons\android-icon-48x48.png" />
+    <Content Include="Content\Favicons\android-icon-72x72.png" />
+    <Content Include="Content\Favicons\android-icon-96x96.png" />
+    <Content Include="Content\Favicons\apple-icon-114x114.png" />
+    <Content Include="Content\Favicons\apple-icon-120x120.png" />
+    <Content Include="Content\Favicons\apple-icon-144x144.png" />
+    <Content Include="Content\Favicons\apple-icon-152x152.png" />
+    <Content Include="Content\Favicons\apple-icon-180x180.png" />
+    <Content Include="Content\Favicons\apple-icon-57x57.png" />
+    <Content Include="Content\Favicons\apple-icon-60x60.png" />
+    <Content Include="Content\Favicons\apple-icon-72x72.png" />
+    <Content Include="Content\Favicons\apple-icon-76x76.png" />
+    <Content Include="Content\Favicons\apple-icon-precomposed.png" />
+    <Content Include="Content\Favicons\apple-icon.png" />
+    <Content Include="Content\Favicons\favicon-16x16.png" />
+    <Content Include="Content\Favicons\favicon-32x32.png" />
+    <Content Include="Content\Favicons\favicon-96x96.png" />
+    <Content Include="Content\Favicons\favicon.ico" />
+    <Content Include="Content\Favicons\ms-icon-144x144.png" />
+    <Content Include="Content\Favicons\ms-icon-150x150.png" />
+    <Content Include="Content\Favicons\ms-icon-310x310.png" />
+    <Content Include="Content\Favicons\ms-icon-70x70.png" />
+    <Content Include="Content\Images\Icons\bag-shoe.png" />
+    <Content Include="Content\Images\Icons\checked-checklist-notepad.png" />
+    <Content Include="Content\Images\Icons\hand-pointer-cart-tablet.png" />
+    <Content Include="Content\Images\Icons\lava-lamps.png" />
+    <Content Include="Content\Images\Icons\male-female-locker-rooms.png" />
+    <Content Include="Content\Images\Icons\new-pointer.png" />
+    <Content Include="Content\Images\Icons\shirt-star.png" />
+    <Content Include="Content\Images\logo_complete_web.png" />
+    <Content Include="Content\Images\oxy_logo_150_grey.png" />
+    <Content Include="Content\Images\Slider\cd-icon-menu.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Slider\cd-icon-navigation.svg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Images\Slider\cd-logo.svg" />
+    <Content Include="Content\Images\Slider\img.jpg" />
+    <Content Include="Content\Images\Slider\slider_01.png" />
+    <Content Include="Content\Images\Slider\slider_02.png" />
+    <Content Include="Content\Images\Slider\slider_03.png" />
+    <Content Include="Content\Images\Slider\slider_05.png" />
+    <Content Include="Content\Images\Slider\tech-1-mobile.jpg" />
+    <Content Include="Content\Images\Slider\tech-1.jpg" />
+    <Content Include="Content\Images\Slider\tech-2-mobile.jpg" />
+    <Content Include="Content\Images\Slider\tech-2.jpg" />
+    <Content Include="Content\Images\Slider\video-replace-mobile.jpg" />
+    <Content Include="Content\Images\Slider\watch.png" />
+    <Content Include="Content\slider.css" />
+    <Content Include="Content\Videos\video.mp4" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\slider.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Toolbar.cshtml" />
+    <Content Include="Views\Home\Favicons.cshtml" />
+    <Content Include="Views\Home\Footer.cshtml" />
+    <Content Include="Views\Home\Slider.cshtml" />
+    <Content Include="Content\Videos\video.webm" />
+    <None Include="Properties\PublishProfiles\GuardianWatch.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -65,14 +183,40 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Startup.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <None Include="Scripts\jquery-2.1.4.intellisense.js" />
+    <Content Include="Content\app-theme.html" />
+    <Content Include="Content\site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-2.1.4.js" />
+    <Content Include="Scripts\jquery-2.1.4.min.js" />
+    <Content Include="Scripts\npm.js" />
     <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-2.1.4.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\IdentityConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -88,7 +232,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>40271</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:40271/</IISUrl>
+          <IISUrl>http://localhost/Ltd.NA.FrontEnd</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+    <meta charset="utf-8" />
+    <!-- favicons -->
+    @Html.Partial("Favicons")
+
+    <!-- Compiled and minified CSS -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/css/materialize.min.css">
+    @Styles.Render("~/Content/css")
+
+    <!-- for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OXY&trade; - @ViewBag.Title</title>
+</head>
+
+<body>
+    <!-- Jquery -->
+    @Scripts.Render("~/bundles/jquery")
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>
+
+    <header>
+        <!-- Toolbar -->
+        @Html.Partial("Toolbar")
+    </header>
+    <main>
+        <!-- Current page -->
+        @RenderBody()
+    </main>
+    <!-- Footer -->
+    <footer class="page-footer blue-grey">
+        @Html.Partial("Footer")
+    </footer>
+
+    <!-- Initialization of controls -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.dropdown-button').dropdown({
+                belowOrigin: true,
+                hover: false,
+                constrain_width: false
+            });
+            $(".button-collapse").sideNav();
+        });
+    </script>
+</body>
+
+</html>
