@@ -1,9 +1,9 @@
 ﻿<!-- Models drop down -->
 <ul id="models-dropdown" class="dropdown-content upper-case">
-    <li><a href="#" class="pink-text text-accent-2">Round</a></li>
-    <li><a href="#" class="pink-text text-accent-2">Squared</a></li>
+    <li><a href="@Url.Action("Round","Watch")" class="pink-text text-accent-2">Round</a></li>
+    <li><a href="@Url.Action("Square","Watch")" class="pink-text text-accent-2">Squared</a></li>
     <li class="divider"></li>
-    <li><a href="#" class="pink-text text-accent-2">Coming soon ...</a></li>
+    <li><a href="@Url.Action("ComingSoon","Watch")" class="pink-text text-accent-2">Coming soon ...</a></li>
 </ul>
 
 <!-- OS drop down-->
@@ -36,7 +36,7 @@
 <div class="navbar-fixed" onload="setupDropDown();">
     <nav class="blue-grey" role="navigation">
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo left valign"></a>
+            <a href="@Url.Action("Index","Home")" class="brand-logo left valign"></a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul id="nav-mobile" class="left hide-on-med-and-down upper-case">
                 <li>
